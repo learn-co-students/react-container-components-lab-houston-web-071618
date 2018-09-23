@@ -18,7 +18,9 @@ class SearchableMovieReviewsContainer extends Component {
     .then(resp => this.setState({...this.state, reviews: resp.results}))
   }
 
-  updateSeachTerm = () => this.setState({...this.state, searchTerm: event.target.searchTerm.value})
+  updateSeachTerm = event => {
+    this.setState({...this.state, searchTerm: event.target.value})
+  }
 
 
   render () {
