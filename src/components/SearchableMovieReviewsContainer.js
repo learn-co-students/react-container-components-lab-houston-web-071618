@@ -16,7 +16,6 @@ class SearchableMovieReviewsContainer extends Component {
     fetch(URL + 'query=' + this.state.searchTerm + '&api-key=' + NYT_API_KEY)
     .then(resp => resp.json())
     .then(resp => this.setState({...this.state, reviews: resp.results}))
-    debugger
   }
 
   updateSeachTerm = () => this.setState({...this.state, searchTerm: event.target.searchTerm.value})
